@@ -23,6 +23,10 @@ modules:
     install:
       - micro
       - starship
+      - rustup
+      - erlang
+      - erlang-rebar3
+      - elixir
       
     remove:
       # example: removing firefox (in favor of the flatpak)
@@ -37,9 +41,13 @@ modules:
       install:
         - org.gnome.Loupe
         - com.vivaldi.Vivaldi
+        - com.github.Murmele.Gittyup
+        - com.visualstudio.code
+        - org.racket_lang.Racket
       remove:
         - org.gnome.eog
         - org.mozilla.Thunderbird
+        - org.mozilla.firefox
     user: {} # Also add Flathub user repo, but no user packages
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
