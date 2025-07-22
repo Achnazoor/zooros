@@ -23,10 +23,10 @@ modules:
     install:
       - micro
       - starship
-      - rustup
-      - erlang
-      - erlang-rebar3
-      - elixir
+    #  - rustup
+    #  - erlang
+    #  - erlang-rebar3
+    #  - elixir
       
     remove:
       # example: removing firefox (in favor of the flatpak)
