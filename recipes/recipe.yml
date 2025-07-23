@@ -6,7 +6,7 @@ name: zooros
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/ublue-os/bluefin
+base-image: ghcr.io/ublue-os/bluefin-dx
 image-version: latest # latest is also supported if you want new updates ASAP
 
 # module configuration, executed in order
@@ -34,6 +34,20 @@ modules:
       #- firefox
       #- firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case) 
 
+  - type: brew
+    brew-analytics: false
+    nofile-limits: true
+    
+  - type: script
+    snippets:
+      - "brew install rustup"
+      - "brew install erlang"
+      - "brew install rebar3"
+      - "brew install elixir"
+      - "brew install gleam"
+      - "brew install go"
+      - "brew install yazi"
+      
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
@@ -44,6 +58,7 @@ modules:
         - com.github.Murmele.Gittyup
         - com.visualstudio.code
         - org.racket_lang.Racket
+        - com.valvesoftware.Steam
       remove:
         - org.gnome.eog
         - org.mozilla.Thunderbird
