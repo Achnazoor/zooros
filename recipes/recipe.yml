@@ -38,15 +38,15 @@ modules:
     brew-analytics: false
     nofile-limits: true
     
-  - type: script
-    snippets:
-      - "brew install rustup"
-      - "brew install erlang"
-      - "brew install rebar3"
-      - "brew install elixir"
-      - "brew install gleam"
-      - "brew install go"
-      - "brew install yazi"
+  #- type: script
+  #  snippets:
+  #    - "brew install rustup"
+  #    - "brew install erlang"
+  #    - "brew install rebar3"
+  #    - "brew install elixir"
+  #    - "brew install gleam"
+  #    - "brew install go"
+  #    - "brew install yazi"
       
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
