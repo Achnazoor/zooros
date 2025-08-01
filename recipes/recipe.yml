@@ -23,10 +23,11 @@ modules:
     install:
       - micro
       - starship
-    #  - rustup
-    #  - erlang
-    #  - erlang-rebar3
-    #  - elixir
+      - rustup
+      - golang
+      - erlang
+      - erlang-rebar3
+      - elixir
       
     #remove:
       # example: removing firefox (in favor of the flatpak)
@@ -55,7 +56,8 @@ modules:
       install:
         - org.gnome.Loupe
         - com.vivaldi.Vivaldi
-        - com.github.Murmele.Gittyup
+      #  - com.github.Murmele.Gittyup
+        - com.gitbutler.gitbutler
         - com.visualstudio.code
         - org.racket_lang.Racket
         - com.valvesoftware.Steam
